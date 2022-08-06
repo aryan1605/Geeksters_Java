@@ -9,7 +9,7 @@ public class GCD {
             return A;
         }
         return gcd(B,A % B);
-        // Time Complexity = O(log n)
+        // Time Complexity = O(log(min(a,b)))
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
