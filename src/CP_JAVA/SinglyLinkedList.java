@@ -1,5 +1,5 @@
 package CP_JAVA;
-// Tmplementation of a Singly LinkedList
+// Tmplementation of a Singly LinkedList.
 public class SinglyLinkedList {
     private ListNode head;
     private static class ListNode
