@@ -1,8 +1,7 @@
 package CP_JAVA;
-
-import java.util.List;
-
 // Implementation of a Singly LinkedList.
+//1) Length of the LL
+//2)
 public class SinglyLinkedList {
     private ListNode head;
     private static class ListNode
