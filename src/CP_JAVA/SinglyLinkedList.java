@@ -1,7 +1,5 @@
 package CP_JAVA;
 // Implementation of a Singly LinkedList.
-//1) Length of the LL
-//2)
 public class SinglyLinkedList {
     private ListNode head;
     private static class ListNode
@@ -41,6 +39,44 @@ public class SinglyLinkedList {
         }
         return count;
     }
+    public boolean Search(int target)
+    {
+        ListNode temp = head;
+        while(temp != null)
+        {
+           if(temp.data == target)
+           {
+               return true;
+           }
+           temp = temp.next;
+        }
+        return false;
+    }
+    public ListNode MiddleNode()
+    {
+        ListNode slowPtr = head;
+        ListNode fastPtr = head;
+        while(fastPtr != null && fastPtr.next != null)
+        {
+            slowPtr = slowPtr.next;
+            fastPtr = fastPtr.next.next;
+        }
+        return slowPtr;
+    }
+    public ListNode ReverseLL()
+    {
+        ListNode current = head;
+        ListNode previous = null;
+        ListNode next = null;
+        while(current != null)
+        {
+            next = current.next;
+            current.next = previous;
+            previous = current;
+            current = next;
+        }
+        return previous;
+    }
     public static void main(String[] args) {
         SinglyLinkedList sll = new SinglyLinkedList();
         sll.InsertFirst(4);
@@ -49,5 +85,16 @@ public class SinglyLinkedList {
         sll.InsertFirst(1);
         sll.Traverse();
         System.out.println("Length of the LinkedList : "+sll.Length());
+        if(sll.Search(2))
+        {
+            System.out.println("PRESENT");
+        }
+        else
+        {
+            System.out.println("NOT PRESENT");
+        }
+        System.out.println("Middle Node Element = "+sll.MiddleNode().data);
+        sll.head = sll.ReverseLL();
+        sll.Traverse();
     }
 }
