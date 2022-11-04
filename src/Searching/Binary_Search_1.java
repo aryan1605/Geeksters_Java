@@ -2,6 +2,8 @@ package Searching;
 import java.util.Scanner;
 
 public class Binary_Search_1 {
+    // For Successful Searches = O(log2(n))
+    // For Unsuccessful Searches = Theta(log2(n))
     public static int BS1(int [] arr,int x) // Iterative Method
     {
         int start = 0,end = arr.length-1;
