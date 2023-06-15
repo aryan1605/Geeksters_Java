@@ -1,6 +1,11 @@
 package LinkedList;
 import java.util.*;
 
+/*
+    In Java, there is a automatic garbage collector which automatically deallocates the memory when not in use.
+
+    Here, while deleting a node, we should not worry about the deleted node, it will automatically be garbage collected.
+ */
 public class Implementation_SLL {
 
     static class Node
